@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Algorithm Is Not Neutral</title>
+  <style>
+    body {
+      background-color: #fdf6e3;
+      color: #073642;
+      font-family: 'Courier New', monospace;
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #268bd2;
+    }
+    section {
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    h1, h2 {
+      color: #b58900;
+    }
+    .nav-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 8px 16px;
+      background-color: #eee8d5;
+      border: 1px solid #93a1a1;
+      text-decoration: none;
+      color: #586e75;
+    }
+  </style>
+</head>
+<body>
+  <h1>The Algorithm Is Not Neutral</h1>
+  <nav>
+    <a href="#" onclick="showPage(0)">1</a>
+    <a href="#" onclick="showPage(1)">2</a>
+    <a href="#" onclick="showPage(2)">3</a>
+    <a href="#" onclick="showPage(3)">4</a>
+    <a href="#" onclick="showPage(4)">5</a>
+    <a href="#" onclick="showPage(5)">6</a>
+    <a href="#" onclick="showPage(6)">7</a>
+  </nav>
+
+  <section class="active">
+    <h2>What Even *Is* Algorithmic Bias?</h2>
+    <p>AI is often described as objective — but it's built by people, trained on biased data, and used to make real-world decisions. From job filters to facial recognition, these systems can silently reproduce existing inequalities.</p>
+  </section>
+  <section>
+    <h2>Invisible Systems, Visible Impact</h2>
+    <p>You may not see the algorithm, but it can still shape your life — deciding who gets hired, what you see online, or even whether you’re recognized correctly in a photo. And it doesn’t treat everyone equally.</p>
+  </section>
+  <section>
+    <h2>What the Research Says</h2>
+    <p>Studies like the <em>Gender Shades</em> project found facial recognition systems were far more accurate for white men than Black women. That gap shows how bias isn't just a bug — it’s built in.</p>
+  </section>
+  <section>
+    <h2>The Hiring Filter You Never See</h2>
+    <p>Hiring algorithms are trained on past data — so if a company hired mostly white men, the algorithm learns to prefer those profiles. Names, schools, and phrasing can quietly work against you.</p>
+  </section>
+  <section>
+    <h2>Tech Is Political</h2>
+    <p>Every decision in tech — from data collection to feature design — is a political choice. AI can mask these decisions as neutral, but they still reflect the values and priorities of those in power.</p>
+  </section>
+  <section>
+    <h2>What Can We Do?</h2>
+    <p>We need more transparency, better data, and developers who ask hard questions. Start by asking: who benefits from this system? Who’s harmed? That’s how change begins.</p>
+  </section>
+  <section>
+    <h2>Final Words</h2>
+    <p>Bias in AI isn’t inevitable. It’s a choice — and one we can challenge. Let’s build tech that reflects justice, not just efficiency.</p>
+  </section>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    function showPage(index) {
+      sections.forEach((section, i) => {
+        section.classList.toggle('active', i === index);
+      });
+    }
+  </script>
+</body>
+</html>
