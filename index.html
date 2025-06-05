@@ -28,23 +28,6 @@
       transform: scale(1.1);
     }
 
-    .key {
-  background-color: #333;
-  color: white;
-  border: 2px solid #666;
-  border-radius: 6px;
-  width: 50px;
-  height: 50px;
-  font-size: 1.2rem;
-  margin: 0 5px;
-  font-family: monospace;
-  cursor: pointer;
-  box-shadow: 2px 2px 5px #999;
-}
-.key:hover {
-  background-color: #444;
-}
-
     section {
       display: none;
       opacity: 0;
@@ -75,14 +58,14 @@
 <body>
   <h1>A Glitch in the Algorithm</h1>
   <p><em>You ever feel like the algorithm hates you? You're not imagining it...</em></p>
-<nav aria-label="Zine navigation">
-  <button class="key" onclick="showPage(0)">1</button>
-  <button class="key" onclick="showPage(1)">2</button>
-  <button class="key" onclick="showPage(2)">3</button>
-  <button class="key" onclick="showPage(3)">4</button>
-  <button class="key" onclick="showPage(4)">5</button>
-</nav>
-
+  
+  <nav aria-label="Zine navigation">
+    <img src="pngtree-black-computer-keyboard-key-number-1-3d-object-png-image_11262727.png" alt="Page 1" onclick="showPage(0)" style="width:50px; cursor:pointer; margin: 0 5px;">
+    <img src="URL_FOR_KEY_2" alt="Page 2" onclick="showPage(1)" style="width:50px; cursor:pointer; margin: 0 5px;">
+    <img src="URL_FOR_KEY_3" alt="Page 3" onclick="showPage(2)" style="width:50px; cursor:pointer; margin: 0 5px;">
+    <img src="URL_FOR_KEY_4" alt="Page 4" onclick="showPage(3)" style="width:50px; cursor:pointer; margin: 0 5px;">
+    <img src="URL_FOR_KEY_5" alt="Page 5" onclick="showPage(4)" style="width:50px; cursor:pointer; margin: 0 5px;">
+  </nav>
 
 <section class="active">
   <h2>The Myth of Neutrality</h2>
