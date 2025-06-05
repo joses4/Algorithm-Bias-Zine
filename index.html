@@ -14,13 +14,19 @@
       margin: auto;
     }
     
-    <nav aria-label="Zine navigation">
-      <img src="pngtree-black-computer-keyboard-key-number-1-3d-object-png-image_11262727.png" alt="Page 1" onclick="showPage(0)" style="width:50px; cursor:pointer; margin: 0 5px;">
-      <img src="URL_FOR_KEY_2" alt="Page 2" onclick="showPage(1)" style="width:50px; cursor:pointer; margin: 0 5px;">
-      <img src="URL_FOR_KEY_3" alt="Page 3" onclick="showPage(2)" style="width:50px; cursor:pointer; margin: 0 5px;">
-      <img src="URL_FOR_KEY_4" alt="Page 4" onclick="showPage(3)" style="width:50px; cursor:pointer; margin: 0 5px;">
-      <img src="URL_FOR_KEY_5" alt="Page 5" onclick="showPage(4)" style="width:50px; cursor:pointer; margin: 0 5px;">
-    </nav>
+    nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    nav img {
+      width: 50px;
+      cursor: pointer;
+      margin: 0 5px;
+      transition: transform 0.2s ease;
+    }
+    nav img:hover {
+      transform: scale(1.1);
+    }
 
     section {
       display: none;
@@ -52,13 +58,14 @@
 <body>
   <h1>A Glitch in the Algorithm</h1>
   <p><em>You ever feel like the algorithm hates you? You're not imagining it...</em></p>
-  <nav aria-label="Zine navigation">
-    <button onclick="showPage(0)">1</button>
-    <button onclick="showPage(1)">2</button>
-    <button onclick="showPage(2)">3</button>
-    <button onclick="showPage(3)">4</button>
-    <button onclick="showPage(4)">5</button>
-  </nav>
+<nav aria-label="Zine navigation">
+  <img src="pngtree-black-computer-keyboard-key-number-1-3d-object-png-image_11262727.png" alt="Page 1" onclick="showPage(0)" style="width:50px; cursor:pointer; margin: 0 5px;">
+  <img src="URL_FOR_KEY_2" alt="Page 2" onclick="showPage(1)" style="width:50px; cursor:pointer; margin: 0 5px;">
+  <img src="URL_FOR_KEY_3" alt="Page 3" onclick="showPage(2)" style="width:50px; cursor:pointer; margin: 0 5px;">
+  <img src="URL_FOR_KEY_4" alt="Page 4" onclick="showPage(3)" style="width:50px; cursor:pointer; margin: 0 5px;">
+  <img src="URL_FOR_KEY_5" alt="Page 5" onclick="showPage(4)" style="width:50px; cursor:pointer; margin: 0 5px;">
+</nav>
+
 
 <section class="active">
   <h2>The Myth of Neutrality</h2>
