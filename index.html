@@ -1,104 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Algorithm Is Not Neutral</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A Glitch in the Code</title>
   <style>
     body {
-      background-color: #e8e4db;
+      background-color: #fdf6e3;
+      color: #073642;
       font-family: 'Courier New', monospace;
-      color: #2c2c2c;
-      padding: 40px;
-      max-width: 750px;
+      padding: 30px;
+      max-width: 800px;
       margin: auto;
-      border: 3px double #444;
-      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    nav button {
+      background-color: #eee8d5;
+      border: 1px solid #93a1a1;
+      color: #268bd2;
+      font-family: inherit;
+      padding: 5px 10px;
+      margin: 0 5px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+    nav button:hover {
+      background-color: #d3cbb6;
+    }
+    section {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+    }
+    section.active {
+      display: block;
+      opacity: 1;
     }
     h1, h2 {
-      color: #1a1a1a;
-      text-shadow: 1px 1px 0px #fff;
+      color: #b58900;
     }
-    .nav {
-      margin-bottom: 30px;
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #586e75;
+    }
+    .quote {
+      background-color: #eee8d5;
       padding: 10px;
-      background: #cfc9b5;
-      border: 1px solid #888;
-      font-size: 1.1em;
-    }
-    .nav a {
-      margin-right: 15px;
-      color: #004488;
-      text-decoration: none;
-    }
-    .nav a:hover {
-      text-decoration: underline;
-    }
-    .content {
-      display: none;
-    }
-    .content.active {
-      display: block;
-    }
-    ul li {
-      margin-top: 6px;
+      border-left: 4px solid #b58900;
+      margin: 20px 0;
+      font-style: italic;
     }
   </style>
 </head>
 <body>
-  <h1>The Algorithm Is Not Neutral</h1>
-  <div class="nav">
-    <a href="#" onclick="showPage('page1')">Page 1</a>
-    <a href="#" onclick="showPage('page2')">Page 2</a>
-    <a href="#" onclick="showPage('page3')">Page 3</a>
-    <a href="#" onclick="showPage('page4')">Page 4</a>
-    <a href="#" onclick="showPage('page5')">Page 5</a>
-  </div>
+  <h1>A Glitch in the Code</h1>
+  <p><em>You ever feel like the algorithm hates you? You're not imagining it...</em></p>
+  <nav aria-label="Zine navigation">
+    <button onclick="showPage(0)">1</button>
+    <button onclick="showPage(1)">2</button>
+    <button onclick="showPage(2)">3</button>
+    <button onclick="showPage(3)">4</button>
+    <button onclick="showPage(4)">5</button>
+  </nav>
 
-  <div class="content" id="page1">
-    <h2>The Promise of AI... But For Who?</h2>
-    <p>Algorithms claim objectivity, but research like the <em>Gender Shades</em> study shows otherwise. Systems developed by major tech companies misidentify darker-skinned women far more than lighter-skinned men, exposing how biased training data results in unequal performance.</p>
-    <p>These failures aren't bugs — they're symptoms of deeper systemic problems in AI development.</p>
-  </div>
+  <section class="active">
+    <h2>The Myth of Neutrality</h2>
+    <p>Turns out ‘smart’ tech might be smart like a 1950s hiring manager… Search engines and digital assistants aren’t blank slates — they reflect the data and priorities of the people who build them.</p>
+    <p><strong>Algorithms of Oppression</strong> shows how search results often mirror racial and gender stereotypes. Hazel Henderson argues tech isn't progress by default — it can just amplify existing nonsense, faster.</p>
+  </section>
 
-  <div class="content" id="page2">
-    <h2>Power in the Platform</h2>
-    <p>As Natali Helberger argues in <em>The Political Power of Platforms</em>, current attempts to regulate misinformation often amplify dominant opinions instead of reducing harm. Algorithms prioritize engagement over truth, creating filter bubbles that reinforce pre-existing beliefs.</p>
-    <p>Who decides what's "reliable"? Often, it’s platforms themselves — unelected, unaccountable, and motivated by profit.</p>
-  </div>
+  <section>
+    <h2>Bias in the Machine</h2>
+    <p>Let’s talk face: facial recognition tech is great — if you're a white guy. The <strong>Gender Shades</strong> study showed major systems flunked when analyzing darker-skinned women.</p>
+    <div class="quote">“The systems that fail us are often the ones we’re told are objective.”</div>
+    <p>Imagine a digital wanted poster: “Algorithm: Misfires 85% on Black women!” and it's still on duty.</p>
+  </section>
 
-  <div class="content" id="page3">
-    <h2>Discrimination by Design</h2>
-    <p>In <em>Algorithms of Oppression</em>, Safiya Noble shows how search engines reflect racial bias. A search for "Black girls" once returned degrading results, while white-coded terms were treated neutrally. This isn’t a glitch — it’s a reflection of which voices dominate online content and advertising.</p>
-    <p>Noble calls on us to critically interrogate how supposedly neutral tools replicate oppressive systems.</p>
-  </div>
+  <section>
+    <h2>Opinion Machines</h2>
+    <p>Algorithms don’t just show you the world — they shape it. Platforms profit from engagement, even if it means boosting outrage and bias. <strong>Helberger</strong> explains how even regulation attempts can make things worse.</p>
+    <label><input type="checkbox" disabled checked> I agree to be manipulated for ad revenue.</label>
+    <p style="font-style: italic; color: #dc322f;">(Text glitching... please refresh your biases)</p>
+  </section>
 
-  <div class="content" id="page4">
-    <h2>Are We Advancing or Spiraling?</h2>
-    <p>Hazel Henderson critiques our obsession with linear progress and growth, suggesting that many "innovations" ignore social well-being. AI is praised as a cure-all, but often advances without ethical checks or inclusive design.</p>
-    <p>Just because something is efficient or new doesn’t mean it’s just.</p>
-  </div>
+  <section>
+    <h2>Can We Fix It?</h2>
+    <p>Maybe. But only if we challenge who controls the tools. <strong>Wild Wild Web</strong> reminds us: the internet was once chaotic, DIY, and free. And it can be again.</p>
+    <p><em>“Y’all ever heard of a federated network? Sounds mighty free.”</em></p>
+  </section>
 
-  <div class="content" id="page5">
-    <h2>What Now?</h2>
-    <p>Fixing algorithmic bias starts with recognizing that technology is never neutral. We need diverse development teams, public oversight, and transparency in AI systems. </p>
-    <p>Resources to explore:
-      <ul>
-        <li><a href="https://www.media.mit.edu/projects/gender-shades/overview/" target="_blank">Gender Shades (MIT Media Lab)</a></li>
-        <li><a href="https://www.youtube.com/watch?v=UG_X_7g63rY" target="_blank">Joy Buolamwini TED Talk</a></li>
-        <li><a href="https://www.algorithmtips.org/" target="_blank">Algorithm Tips Toolkit</a></li>
-      </ul>
-    </p>
+  <section>
+    <h2>Take Action (or Just Poke Around)</h2>
+    <p>Want to go deeper? Check out these sites:</p>
+    <ul>
+      <li><a href="https://yesterweb.org" target="_blank">Yesterweb</a></li>
+      <li><a href="https://neocities.org" target="_blank">Neocities</a></li>
+      <li><a href="https://ainowinstitute.org" target="_blank">AI Now Institute</a></li>
+    </ul>
+    <p><strong>Bonus:</strong> Click the cat that looks most hireable. (Just kidding. Or are we?)</p>
+    <p style="color: #dc322f; animation: blink 1s step-start infinite;">[INSERT BLINKING PIXEL BUTTONS]</p>
+  </section>
+
+  <div class="footer">
+    <p>Made with 🤖+🧠+💻 by Jose — <a href="https://github.com/joses4" target="_blank">GitHub</a></p>
   </div>
 
   <script>
-    function showPage(id) {
-      const pages = document.querySelectorAll('.content');
-      pages.forEach(p => p.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
+    const sections = document.querySelectorAll('section');
+    function showPage(index) {
+      sections.forEach((section, i) => {
+        section.classList.remove('active');
+        if (i === index) {
+          section.classList.add('active');
+        }
+      });
     }
-    // Default page
-    showPage('page1');
+    showPage(0);
   </script>
 </body>
 </html>
