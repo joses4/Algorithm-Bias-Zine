@@ -6,91 +6,88 @@
   <title>The Algorithm Is Not Neutral</title>
   <style>
     body {
-      background-color: #fdf6e3;
-      color: #073642;
+      background-color: #f2f2f2;
       font-family: 'Courier New', monospace;
-      padding: 30px;
+      color: #222;
+      line-height: 1.6;
+      padding: 20px;
       max-width: 800px;
       margin: auto;
     }
-    nav {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #268bd2;
-    }
-    section {
-      display: none;
-    }
-    section.active {
-      display: block;
-    }
     h1, h2 {
-      color: #b58900;
+      color: #2c3e50;
     }
-    .nav-btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 8px 16px;
-      background-color: #eee8d5;
-      border: 1px solid #93a1a1;
+    .page {
+      margin-bottom: 60px;
+      border-bottom: 1px dashed #aaa;
+      padding-bottom: 40px;
+    }
+    a {
+      color: #3498db;
       text-decoration: none;
-      color: #586e75;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <h1>The Algorithm Is Not Neutral</h1>
-  <nav>
-    <a href="#" onclick="showPage(0)">1</a>
-    <a href="#" onclick="showPage(1)">2</a>
-    <a href="#" onclick="showPage(2)">3</a>
-    <a href="#" onclick="showPage(3)">4</a>
-    <a href="#" onclick="showPage(4)">5</a>
-    <a href="#" onclick="showPage(5)">6</a>
-    <a href="#" onclick="showPage(6)">7</a>
-  </nav>
 
-  <section class="active">
-    <h2>What Even *Is* Algorithmic Bias?</h2>
-    <p>AI is often described as objective — but it's built by people, trained on biased data, and used to make real-world decisions. From job filters to facial recognition, these systems can silently reproduce existing inequalities.</p>
-    <p> As more AI systems are increasingly getting trained on more data, it's improtant to ask: how much longer? How much longer is it gonna take for the average ai system to preform equally for all it's users. </p>
-  </section>
-  <section>
-    <h2>Invisible Systems, Visible Impact</h2>
-    <p>You may not see the algorithm, but it can still shape your life — deciding who gets hired, what you see online, or even whether you’re recognized correctly in a photo. And it doesn’t treat everyone equally.</p>
-  </section>
-  <section>
-    <h2>What the Research Says</h2>
-    <p>Studies like the <em>Gender Shades</em> project found facial recognition systems were far more accurate for white men than Black women. That gap shows how bias isn't just a bug — it’s built in.</p>
-  </section>
-  <section>
-    <h2>The Hiring Filter You Never See</h2>
-    <p>Hiring algorithms are trained on past data — so if a company hired mostly white men, the algorithm learns to prefer those profiles. Names, schools, and phrasing can quietly work against you.</p>
-  </section>
-  <section>
-    <h2>Tech Is Political</h2>
-    <p>Every decision in tech — from data collection to feature design — is a political choice. AI can mask these decisions as neutral, but they still reflect the values and priorities of those in power.</p>
-  </section>
-  <section>
-    <h2>What Can We Do?</h2>
-    <p>We need more transparency, better data, and developers who ask hard questions. Start by asking: who benefits from this system? Who’s harmed? That’s how change begins.</p>
-  </section>
-  <section>
-    <h2>Final Words</h2>
-    <p>Bias in AI isn’t inevitable. It’s a choice — and one we can challenge. Let’s build tech that reflects justice, not just efficiency.</p>
-  </section>
+  <div class="page" id="page1">
+    <h2>Page 1: The Promise of AI... But For Who?</h2>
+    <p>
+      Algorithms claim objectivity, but research like the <em>Gender Shades</em> study shows otherwise. Systems developed by major tech companies misidentify darker-skinned women far more than lighter-skinned men, exposing how biased training data results in unequal performance.
+    </p>
+    <p>
+      These failures aren't bugs — they're symptoms of deeper systemic problems in AI development.
+    </p>
+  </div>
 
-  <script>
-    const sections = document.querySelectorAll('section');
-    function showPage(index) {
-      sections.forEach((section, i) => {
-        section.classList.toggle('active', i === index);
-      });
-    }
-  </script>
+  <div class="page" id="page2">
+    <h2>Page 2: Power in the Platform</h2>
+    <p>
+      As Natali Helberger argues in <em>The Political Power of Platforms</em>, current attempts to regulate misinformation often amplify dominant opinions instead of reducing harm. Algorithms prioritize engagement over truth, creating filter bubbles that reinforce pre-existing beliefs.
+    </p>
+    <p>
+      Who decides what's "reliable"? Often, it’s platforms themselves — unelected, unaccountable, and motivated by profit.
+    </p>
+  </div>
+
+  <div class="page" id="page3">
+    <h2>Page 3: Discrimination by Design</h2>
+    <p>
+      In <em>Algorithms of Oppression</em>, Safiya Noble shows how search engines reflect racial bias. A search for "Black girls" once returned degrading results, while white-coded terms were treated neutrally. This isn’t a glitch — it’s a reflection of which voices dominate online content and advertising.
+    </p>
+    <p>
+      Noble calls on us to critically interrogate how supposedly neutral tools replicate oppressive systems.
+    </p>
+  </div>
+
+  <div class="page" id="page4">
+    <h2>Page 4: Are We Advancing or Spiraling?</h2>
+    <p>
+      Hazel Henderson critiques our obsession with linear progress and growth, suggesting that many "innovations" ignore social well-being. AI is praised as a cure-all, but often advances without ethical checks or inclusive design.
+    </p>
+    <p>
+      Just because something is efficient or new doesn’t mean it’s just.
+    </p>
+  </div>
+
+  <div class="page" id="page5">
+    <h2>Page 5: What Now?</h2>
+    <p>
+      Fixing algorithmic bias starts with recognizing that technology is never neutral. We need diverse development teams, public oversight, and transparency in AI systems. 
+    </p>
+    <p>
+      Resources to explore: 
+      <ul>
+        <li><a href="https://www.media.mit.edu/projects/gender-shades/overview/" target="_blank">Gender Shades (MIT Media Lab)</a></li>
+        <li><a href="https://www.youtube.com/watch?v=UG_X_7g63rY" target="_blank">Joy Buolamwini TED Talk</a></li>
+        <li><a href="https://www.algorithmtips.org/" target="_blank">Algorithm Tips Toolkit</a></li>
+      </ul>
+    </p>
+  </div>
+
 </body>
 </html>
