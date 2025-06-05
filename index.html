@@ -6,81 +6,83 @@
   <title>The Algorithm Is Not Neutral</title>
   <style>
     body {
-      background-color: #f2f2f2;
+      background-color: #e8e4db;
       font-family: 'Courier New', monospace;
-      color: #222;
-      line-height: 1.6;
-      padding: 20px;
-      max-width: 800px;
+      color: #2c2c2c;
+      padding: 40px;
+      max-width: 750px;
       margin: auto;
+      border: 3px double #444;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     }
     h1, h2 {
-      color: #2c3e50;
+      color: #1a1a1a;
+      text-shadow: 1px 1px 0px #fff;
     }
-    .page {
-      margin-bottom: 60px;
-      border-bottom: 1px dashed #aaa;
-      padding-bottom: 40px;
+    .nav {
+      margin-bottom: 30px;
+      padding: 10px;
+      background: #cfc9b5;
+      border: 1px solid #888;
+      font-size: 1.1em;
     }
-    a {
-      color: #3498db;
+    .nav a {
+      margin-right: 15px;
+      color: #004488;
       text-decoration: none;
     }
-    a:hover {
+    .nav a:hover {
       text-decoration: underline;
+    }
+    .content {
+      display: none;
+    }
+    .content.active {
+      display: block;
+    }
+    ul li {
+      margin-top: 6px;
     }
   </style>
 </head>
 <body>
   <h1>The Algorithm Is Not Neutral</h1>
-
-  <div class="page" id="page1">
-    <h2>Page 1: The Promise of AI... But For Who?</h2>
-    <p>
-      Algorithms claim objectivity, but research like the <em>Gender Shades</em> study shows otherwise. Systems developed by major tech companies misidentify darker-skinned women far more than lighter-skinned men, exposing how biased training data results in unequal performance.
-    </p>
-    <p>
-      These failures aren't bugs — they're symptoms of deeper systemic problems in AI development.
-    </p>
+  <div class="nav">
+    <a href="#" onclick="showPage('page1')">Page 1</a>
+    <a href="#" onclick="showPage('page2')">Page 2</a>
+    <a href="#" onclick="showPage('page3')">Page 3</a>
+    <a href="#" onclick="showPage('page4')">Page 4</a>
+    <a href="#" onclick="showPage('page5')">Page 5</a>
   </div>
 
-  <div class="page" id="page2">
-    <h2>Page 2: Power in the Platform</h2>
-    <p>
-      As Natali Helberger argues in <em>The Political Power of Platforms</em>, current attempts to regulate misinformation often amplify dominant opinions instead of reducing harm. Algorithms prioritize engagement over truth, creating filter bubbles that reinforce pre-existing beliefs.
-    </p>
-    <p>
-      Who decides what's "reliable"? Often, it’s platforms themselves — unelected, unaccountable, and motivated by profit.
-    </p>
+  <div class="content" id="page1">
+    <h2>The Promise of AI... But For Who?</h2>
+    <p>Algorithms claim objectivity, but research like the <em>Gender Shades</em> study shows otherwise. Systems developed by major tech companies misidentify darker-skinned women far more than lighter-skinned men, exposing how biased training data results in unequal performance.</p>
+    <p>These failures aren't bugs — they're symptoms of deeper systemic problems in AI development.</p>
   </div>
 
-  <div class="page" id="page3">
-    <h2>Page 3: Discrimination by Design</h2>
-    <p>
-      In <em>Algorithms of Oppression</em>, Safiya Noble shows how search engines reflect racial bias. A search for "Black girls" once returned degrading results, while white-coded terms were treated neutrally. This isn’t a glitch — it’s a reflection of which voices dominate online content and advertising.
-    </p>
-    <p>
-      Noble calls on us to critically interrogate how supposedly neutral tools replicate oppressive systems.
-    </p>
+  <div class="content" id="page2">
+    <h2>Power in the Platform</h2>
+    <p>As Natali Helberger argues in <em>The Political Power of Platforms</em>, current attempts to regulate misinformation often amplify dominant opinions instead of reducing harm. Algorithms prioritize engagement over truth, creating filter bubbles that reinforce pre-existing beliefs.</p>
+    <p>Who decides what's "reliable"? Often, it’s platforms themselves — unelected, unaccountable, and motivated by profit.</p>
   </div>
 
-  <div class="page" id="page4">
-    <h2>Page 4: Are We Advancing or Spiraling?</h2>
-    <p>
-      Hazel Henderson critiques our obsession with linear progress and growth, suggesting that many "innovations" ignore social well-being. AI is praised as a cure-all, but often advances without ethical checks or inclusive design.
-    </p>
-    <p>
-      Just because something is efficient or new doesn’t mean it’s just.
-    </p>
+  <div class="content" id="page3">
+    <h2>Discrimination by Design</h2>
+    <p>In <em>Algorithms of Oppression</em>, Safiya Noble shows how search engines reflect racial bias. A search for "Black girls" once returned degrading results, while white-coded terms were treated neutrally. This isn’t a glitch — it’s a reflection of which voices dominate online content and advertising.</p>
+    <p>Noble calls on us to critically interrogate how supposedly neutral tools replicate oppressive systems.</p>
   </div>
 
-  <div class="page" id="page5">
-    <h2>Page 5: What Now?</h2>
-    <p>
-      Fixing algorithmic bias starts with recognizing that technology is never neutral. We need diverse development teams, public oversight, and transparency in AI systems. 
-    </p>
-    <p>
-      Resources to explore: 
+  <div class="content" id="page4">
+    <h2>Are We Advancing or Spiraling?</h2>
+    <p>Hazel Henderson critiques our obsession with linear progress and growth, suggesting that many "innovations" ignore social well-being. AI is praised as a cure-all, but often advances without ethical checks or inclusive design.</p>
+    <p>Just because something is efficient or new doesn’t mean it’s just.</p>
+  </div>
+
+  <div class="content" id="page5">
+    <h2>What Now?</h2>
+    <p>Fixing algorithmic bias starts with recognizing that technology is never neutral. We need diverse development teams, public oversight, and transparency in AI systems. </p>
+    <p>Resources to explore:
       <ul>
         <li><a href="https://www.media.mit.edu/projects/gender-shades/overview/" target="_blank">Gender Shades (MIT Media Lab)</a></li>
         <li><a href="https://www.youtube.com/watch?v=UG_X_7g63rY" target="_blank">Joy Buolamwini TED Talk</a></li>
@@ -89,5 +91,14 @@
     </p>
   </div>
 
+  <script>
+    function showPage(id) {
+      const pages = document.querySelectorAll('.content');
+      pages.forEach(p => p.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    // Default page
+    showPage('page1');
+  </script>
 </body>
 </html>
