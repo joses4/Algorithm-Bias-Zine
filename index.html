@@ -126,6 +126,54 @@
   pointer-events: auto;
 }
 
+.bias-diagram {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 12px;
+  font-family: Arial, sans-serif;
+}
+
+.bias-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 140px;
+  text-align: left;
+}
+
+.box {
+  background-color: #eee8d5;
+  color: #073642;
+  padding: 8px 14px;
+  border: 2px solid #b58900;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.bias-stage ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+  font-size: 0.85em;
+  color: #586e75;
+}
+
+.bias-stage li {
+  margin-bottom: 4px;
+}
+
+.arrow {
+  font-size: 2em;
+  line-height: 1;
+  color: #b58900;
+  margin-top: 20px;
+}
+
+
 </style>
 </head>
 <body>
@@ -168,6 +216,50 @@
   <p>Together, these works dismantle the myth that technology is neutral. From racist autocomplete suggestions to discriminatory image recognition, the evidence shows that digital systems mirror the very real inequalities of the offline world. These are not isolated bugs — they’re symptoms of deeper issues in how data is collected, categorized, and monetized.</p>
   <p>This isn’t just a question of tech literacy — it’s a political and social issue. Understanding the myth of neutrality is the first step in demanding more accountability and justice from the algorithms that increasingly govern our lives.</p>
 
+  <div class="bias-diagram">
+  <div class="bias-stage">
+    <div class="box">World</div>
+  </div>
+  <div class="arrow">→</div>
+  <div class="bias-stage">
+    <div class="box">Data</div>
+    <ul>
+      <li>Historical Bias</li>
+      <li>Representation Bias</li>
+      <li>Measurement Bias</li>
+      <li>Temporal Bias</li>
+      <li>Omitted Variable Bias</li>
+    </ul>
+  </div>
+  <div class="arrow">→</div>
+  <div class="bias-stage">
+    <div class="box">AI/ML</div>
+    <ul>
+      <li>Algorithmic Bias</li>
+      <li>Evaluation Bias</li>
+      <li>Aggregation Bias</li>
+      <li>Popularity Bias</li>
+      <li>Ranking Bias</li>
+    </ul>
+  </div>
+  <div class="arrow">→</div>
+  <div class="bias-stage">
+    <div class="box">Human Review</div>
+    <ul>
+      <li>Behavioral Bias</li>
+      <li>Presentation Bias</li>
+      <li>Content Production Bias</li>
+      <li>Social Bias</li>
+    </ul>
+  </div>
+  <div class="arrow">→</div>
+  <div class="bias-stage">
+    <div class="box">Actions</div>
+  </div>
+</div>
+
+
+  
   <div style="text-align: center; margin-top: 20px;">
     <img src="BIAS-in-AI.jpg" alt="Diagram showing types of algorithmic bias" style="width: 75%; max-width: 500px; height: auto; border: 1px solid #ccc; border-radius: 5px;">
     <p style="font-size: 0.8em; color: #586e75; margin-top: 8px;">
