@@ -325,6 +325,21 @@
     <h2>Bias in the Machine</h2>
     <p>Facial recognition sounds futuristic — until it can’t recognize your face. The <strong>Gender Shades</strong> study by Joy Buolamwini and Timnit Gebru put a spotlight on commercial AI systems that routinely misidentify darker-skinned individuals, especially women.</p>
     <p>These AI tools — marketed as objective, data-driven, and scalable — performed best on lighter-skinned men, with error rates as low as 0.8%. But for darker-skinned women? <em>The chance of misclassification for darker-skinned females in some classifiers was over 34%.</em> That’s not just a bug — that’s systemic.</p>
+
+    <div style="text-align: center; margin-top: 30px;">
+  <div style="position: relative; display: inline-block;">
+    <img src="facial_bias_chart.png" alt="Facial Recognition Bias Chart" style="width: 100%; max-width: 600px; border: 1px solid #ccc; border-radius: 6px;">
+
+    <!-- Tooltip hover zones -->
+    <div title="Microsoft’s gender classifier: 94% accuracy for darker-skinned men, only 79.2% for darker-skinned women." style="position: absolute; top: 18%; left: 10%; width: 20%; height: 35%; cursor: help;"></div>
+    <div title="Face++ has one of the largest gaps: 99.3% for lighter males vs. 65.5% for darker females." style="position: absolute; top: 18%; left: 40%; width: 20%; height: 35%; cursor: help;"></div>
+    <div title="IBM shows a 34.4% performance gap between lighter males and darker females." style="position: absolute; top: 18%; left: 70%; width: 20%; height: 35%; cursor: help;"></div>
+  </div>
+  <p style="font-size: 0.8em; color: #586e75; margin-top: 10px;">
+    <em>Adapted from Buolamwini & Gebru’s <strong>Gender Shades</strong> study (2018). Accuracy gaps in facial recognition systems reveal systemic algorithmic bias.</em>
+  </p>
+</div>
+    
     <p>So, how does this happen? A major factor is the training data: many of these models are trained on skewed image sets that underrepresent darker skin tones, women, and people with intersectional identities. When these biases go unchecked, the technology doesn't just mirror inequality — it reinforces it at scale.</p>
     <p>This matters. Facial recognition is already being used in policing, hiring, and housing. Imagine being flagged as a suspect, denied a job, or misclassified by a healthcare system — all because the algorithm can’t “see” you accurately.</p>
     <p>Buolamwini's thesis further emphasizes the lack of accountability in these technologies. Developers often overlook the social consequences of their tools, especially when their teams lack racial and gender diversity.</p>
