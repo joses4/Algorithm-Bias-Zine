@@ -223,6 +223,46 @@
   50% { transform: scale(1.3); }
 }
 
+.annotated-container {
+      position: relative;
+      max-width: 100%;
+      margin-top: 20px;
+    }
+
+    .annotated-container img {
+      width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .dot {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background-color: #dc322f;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid white;
+      box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    }
+
+    .tooltip {
+      position: absolute;
+      background-color: #eee8d5;
+      color: #073642;
+      padding: 8px 10px;
+      font-size: 0.8em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      white-space: nowrap;
+      display: none;
+      z-index: 10;
+    }
+
+    .dot:hover + .tooltip {
+      display: block;
+    }
 
 </style>
 </head>
@@ -326,16 +366,31 @@
     <p>Facial recognition sounds futuristic — until it can’t recognize your face. The <strong>Gender Shades</strong> study by Joy Buolamwini and Timnit Gebru put a spotlight on commercial AI systems that routinely misidentify darker-skinned individuals, especially women.</p>
     <p>These AI tools — marketed as objective, data-driven, and scalable — performed best on lighter-skinned men, with error rates as low as 0.8%. But for darker-skinned women? <em>The chance of misclassification for darker-skinned females in some classifiers was over 34%.</em> That’s not just a bug — that’s systemic.</p>
 
-    <div style="text-align: center; margin-top: 30px;">
-  <div style="position: relative; display: inline-block;">
-    <img src="GenderShades_gs04.webp" alt="Facial Recognition Bias Chart" style="width: 100%; max-width: 600px; border: 1px solid #ccc; border-radius: 6px;">
+      <div class="annotated-container">
+      <img src="GenderShades_gs04" alt="Classifier performance by skin tone and gender" />
 
-    <!-- Tooltip hover zones -->
-    <div title="Microsoft’s gender classifier: 94% accuracy for darker-skinned men, only 79.2% for darker-skinned women." style="position: absolute; top: 18%; left: 10%; width: 20%; height: 35%; cursor: help;"></div>
-    <div title="Face++ has one of the largest gaps: 99.3% for lighter males vs. 65.5% for darker females." style="position: absolute; top: 18%; left: 40%; width: 20%; height: 35%; cursor: help;"></div>
-    <div title="IBM shows a 34.4% performance gap between lighter males and darker females." style="position: absolute; top: 18%; left: 70%; width: 20%; height: 35%; cursor: help;"></div>
-  </div>
+      <span class="dot" style="top: 5%; left: 20%;"></span>
+      <div class="tooltip" style="top: 10%; left: 25%;">Microsoft's classifier was 20.8% less accurate for darker-skinned women.</div>
+
+      <span class="dot" style="top: 22%; left: 20%;"></span>
+      <div class="tooltip" style="top: 27%; left: 25%;">FACE++ showed the widest accuracy gap: 33.8% difference between groups.</div>
+
+      <span class="dot" style="top: 39%; left: 20%;"></span>
+      <div class="tooltip" style="top: 44%; left: 25%;">IBM's tool had the lowest accuracy for darker-skinned women — just 65.3%.</div>
+    </div>
   <p style="font-size: 0.8em; color: #586e75; margin-top: 10px;">
+    <script>
+    const sections = document.querySelectorAll('section');
+    function showPage(index) {
+      sections.forEach((section, i) => {
+        section.classList.remove('active');
+        if (i === index) {
+          section.classList.add('active');
+        }
+      });
+    }
+    showPage(0);
+  </script>
     <em>Adapted from Buolamwini & Gebru’s <strong>Gender Shades</strong> study (2018). Accuracy gaps in facial recognition systems reveal systemic algorithmic bias.</em>
   </p>
 </div>
