@@ -366,7 +366,7 @@
     <p>Facial recognition sounds futuristic — until it can’t recognize your face. The <strong>Gender Shades</strong> study by Joy Buolamwini and Timnit Gebru put a spotlight on commercial AI systems that routinely misidentify darker-skinned individuals, especially women.</p>
     <p>These AI tools — marketed as objective, data-driven, and scalable — performed best on lighter-skinned men, with error rates as low as 0.8%. But for darker-skinned women? <em>The chance of misclassification for darker-skinned females in some classifiers was over 34%.</em> That’s not just a bug — that’s systemic.</p>
 
-      <div class="annotated-container">
+    <div class="annotated-container">
       <img src="GenderShades_gs04.webp" alt="Classifier performance by skin tone and gender" />
 
       <span class="dot" style="top: 22%; left: 20%;"></span>
@@ -379,18 +379,6 @@
       <div class="tooltip" style="top: 44%; left: 25%;">IBM's tool had the lowest accuracy for darker-skinned women — just 65.3%.</div>
     </div>
   <p style="font-size: 0.8em; color: #586e75; margin-top: 10px;">
-    <script>
-    const sections = document.querySelectorAll('section');
-    function showPage(index) {
-      sections.forEach((section, i) => {
-        section.classList.remove('active');
-        if (i === index) {
-          section.classList.add('active');
-        }
-      });
-    }
-    showPage(0);
-  </script>
     <em>Adapted from Buolamwini & Gebru’s <strong>Gender Shades</strong> study (2018). Accuracy gaps in facial recognition systems reveal systemic algorithmic bias.</em>
   </p>
 </div>
