@@ -173,6 +173,56 @@
   margin-top: 20px;
 }
 
+.bias-stage li {
+  position: relative;
+  cursor: help;
+  margin-bottom: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.bias-stage li:hover {
+  background-color: #fef9e7;
+  border-radius: 4px;
+}
+
+.bias-stage li:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #eee8d5;
+  color: #073642;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  white-space: nowrap;
+  margin-top: 4px;
+  font-size: 0.8em;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.arrow {
+  font-size: 2em;
+  line-height: 1;
+  color: #b58900;
+  margin-top: 20px;
+  animation: pulseArrow 1.2s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulseArrow {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+}
+
 
 </style>
 </head>
@@ -224,32 +274,32 @@
   <div class="bias-stage">
     <div class="box">Data</div>
     <ul>
-      <li>Historical Bias</li>
-      <li>Representation Bias</li>
-      <li>Measurement Bias</li>
-      <li>Temporal Bias</li>
-      <li>Omitted Variable Bias</li>
+      <li data-tooltip="Bias from outdated beliefs and practices still embedded in data.">Historical Bias</li>
+      <li data-tooltip="Over- or under-representation of groups.">Representation Bias</li>
+      <li data-tooltip="Inaccurate or flawed measurement methods.">Measurement Bias</li>
+      <li data-tooltip="Bias from time-lagged or outdated data.">Temporal Bias</li>
+      <li data-tooltip="Missing key variables that explain disparities.">Omitted Variable Bias</li>
     </ul>
   </div>
   <div class="arrow">→</div>
   <div class="bias-stage">
     <div class="box">AI/ML</div>
     <ul>
-      <li>Algorithmic Bias</li>
-      <li>Evaluation Bias</li>
-      <li>Aggregation Bias</li>
-      <li>Popularity Bias</li>
-      <li>Ranking Bias</li>
+      <li data-tooltip="The model reflects and amplifies bias.">Algorithmic Bias</li>
+      <li data-tooltip="Bias from how performance is evaluated.">Evaluation Bias</li>
+      <li data-tooltip="Combining groups that shouldn't be combined.">Aggregation Bias</li>
+      <li data-tooltip="Bias toward popular results.">Popularity Bias</li>
+      <li data-tooltip="Bias in how results are ranked.">Ranking Bias</li>
     </ul>
   </div>
   <div class="arrow">→</div>
   <div class="bias-stage">
     <div class="box">Human Review</div>
     <ul>
-      <li>Behavioral Bias</li>
-      <li>Presentation Bias</li>
-      <li>Content Production Bias</li>
-      <li>Social Bias</li>
+      <li data-tooltip="Bias in how people interpret model output.">Behavioral Bias</li>
+      <li data-tooltip="Bias from how data is presented to users.">Presentation Bias</li>
+      <li data-tooltip="Bias in what content gets created or shared.">Content Production Bias</li>
+      <li data-tooltip="Social stereotypes shaping results.">Social Bias</li>
     </ul>
   </div>
   <div class="arrow">→</div>
