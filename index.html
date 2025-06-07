@@ -322,6 +322,34 @@
     .info:hover + .tooltip {
       display: block;
     }
+
+    .toolkit {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .tool {
+      background: #eee8d5;
+      border: 2px solid #b58900;
+      padding: 12px;
+      border-radius: 10px;
+      width: calc(50% - 10px);
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .tool:hover {
+      background-color: #fdf6e3;
+    }
+
+    .tool span {
+      display: block;
+      font-size: 1.4em;
+      margin-bottom: 6px;
+    }
     
 </style>
 </head>
@@ -507,8 +535,27 @@
     <p>One critical piece is community oversight. Imagine if the people affected by these systems were at the table — not just as test cases, but as co-designers. That means interdisciplinary teams, public audits, and resisting the idea that “data is truth” without context.</p>
     <p>Another piece? Better data. Diverse, representative datasets aren’t a silver bullet, but they’re a start. If an AI can’t recognize your face, it shouldn’t be used in policing or hiring. Period.</p>
     <p>And don’t forget: tech isn’t magic. It’s built by people — which means we can rebuild it, too. Smaller, open-source tools. Federated platforms. Local, transparent systems that don’t need to sell your attention to survive.</p>
-    <p>Change won’t come from tweaking a few lines of code. It’ll come from rethinking the whole system — and who it’s supposed to serve.</p>
+
+        <div class="toolkit">
+    <div class="tool" title="Conduct regular audits to uncover and correct hidden bias.">
+      <span>🔧</span> Accountability
+    </div>
+    <div class="tool" title="Ensure diverse voices are represented in the design process.">
+      <span>🧰</span> Inclusive Teams
+    </div>
+    <div class="tool" title="Use balanced, representative, and decolonized data sources.">
+      <span>📊</span> Better Data
+    </div>
+    <div class="tool" title="Include community input and shared decision-making.">
+      <span>🛠</span> Community Power
+    </div>
+    <div class="tool" title="Open-source algorithms and transparent documentation.">
+      <span>🪛</span> Transparency
+    </div>
+  </div>
   </section>
+  
+    <p>Change won’t come from tweaking a few lines of code. It’ll come from rethinking the whole system — and who it’s supposed to serve.</p>
 
   <section>
     <h2>Take Action (or Just Poke Around)</h2>
