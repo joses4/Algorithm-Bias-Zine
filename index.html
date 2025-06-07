@@ -53,6 +53,63 @@
       margin: 20px 0;
       font-style: italic;
     }
+
+    .search-mockup {
+  margin: 25px 0;
+  background-color: #fefcf5;
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.google-logo {
+  width: 24px;
+  margin-right: 8px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.autocomplete-box {
+  margin-left: 32px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 10px;
+  color: #555;
+}
+
+.autocomplete-box p {
+  margin: 2px 0;
+  padding: 2px 6px;
+}
+
+.autocomplete-box .highlighted {
+  background-color: #fdf6e3;
+  font-weight: bold;
+  color: #b58900;
+}
+
+.caption {
+  margin-top: 10px;
+  font-size: 0.85em;
+  color: #586e75;
+  font-style: italic;
+}
+    
   </style>
 </head>
 <body>
@@ -71,6 +128,23 @@
   <h2>The Myth of Neutrality</h2>
   <p>Turns out “smart” tech might be smart like a 1950s hiring manager… Algorithms don’t live in a vacuum — they reflect the values, biases, and blind spots of the people and institutions who build them.</p>
   <p>In <strong>Algorithms of Oppression</strong>, Safiya Noble demonstrates how search engines like Google surface dehumanizing and stereotypical content when users search for terms like “Black girls.” These results aren’t accidental. They stem from ranking algorithms that prioritize engagement and profit over ethics or accuracy. Noble argues this isn't a glitch in the system — it's the system working as designed within capitalist and discriminatory frameworks.</p>
+  
+  <div class="search-mockup">
+  <div class="search-bar">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google G" class="google-logo" />
+    <input type="text" value="Black girls" readonly />
+  </div>
+  <div class="autocomplete-box">
+    <p>black girls are loud</p>
+    <p>black girls attitude</p>
+    <p>black girls fighting</p>
+    <p class="highlighted">black girls...</p>
+  </div>
+  <p class="caption">
+    This was once a real autocomplete result. Algorithms don’t just reflect society — they reinforce it.
+  </p>
+</div>
+  
   <p>Meanwhile, <strong>Hazel Henderson</strong>, in “Progress or Collective Insanity,” warns against our overreliance on the idea that technology equals progress. She points out how innovations are often developed within narrow economic structures that serve existing power hierarchies. Instead of broadening access and opportunity, digital tools often reinforce societal inequalities when left unchecked.</p>
 
   <div class="quote">“Search is a mirror of users’ beliefs and that society still holds a variety of sexist ideas about women.”<br>— Safiya Umoja Noble</div>
