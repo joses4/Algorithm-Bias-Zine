@@ -112,18 +112,26 @@
   font-style: italic;
 }
 
-.suggestions {
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.4s ease;
-  pointer-events: none;
+.suggestions div {
+  position: relative;
+  cursor: help;
 }
 
-.search-bar:focus-within + .suggestions,
-.search-input:focus + .suggestions {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+.suggestions div:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #eee8d5;
+  color: #073642;
+  padding: 5px 8px;
+  border: 1px solid #ccc;
+  font-size: 0.8em;
+  width: max-content;
+  white-space: nowrap;
+  z-index: 10;
+  margin-top: 4px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
     
   </style>
